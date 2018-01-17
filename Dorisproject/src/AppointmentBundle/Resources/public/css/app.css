@@ -1,0 +1,31 @@
+body {
+  Background-color: #ffffff; }
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch; }
+
+footer {
+  font-size: 15px;
+  color: white; }
+
+footer a {
+  color: white; }
+
+footer a:hover {
+  color: #fba4ff; }
+
+.footer-bottom {
+  background: #381027;
+  padding: 2em; }
+
+.footer-top {
+  background: #551044; }
+
+.footer-middle {
+  background: #381027;
+  padding-top: 2em;
+  color: white; }
+
+/*# sourceMappingURL=app.css.map */

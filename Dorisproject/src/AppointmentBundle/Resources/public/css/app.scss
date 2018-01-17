@@ -1,0 +1,47 @@
+$thema-home: #381027;
+$thema-home2: #551044;
+
+body{
+  Background-color: #ffffff;
+}
+//#carouselId{
+//  display: flex;
+//  justify-content: center;
+//}
+//.flex-container{
+//  padding: 0;
+//  margin: 0;
+//  justify-content: space-around;
+//
+//}
+
+.flex{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+
+}
+
+footer{
+  font-size: 15px;
+  color: white;
+}
+footer a{
+  color: white;
+}
+footer a:hover{
+  color: #fba4ff;
+}
+
+.footer-bottom{
+  background: $thema-home;
+  padding: 2em;
+}
+.footer-top{
+  background: $thema-home2;
+}
+.footer-middle{
+  background: $thema-home;
+  padding-top: 2em;
+  color: white;
+}
