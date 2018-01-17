@@ -8,7 +8,7 @@
 
 namespace AppointmentBundle\Entity;
 
-use Kami\BookingBundle\Entity\Booking as BaseClass;
+use vendor\Kami\BookingBundle\Entity\Booking as BaseClass;
 
 /**
  * Booking
