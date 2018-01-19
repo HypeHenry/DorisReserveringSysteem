@@ -1,0 +1,33 @@
+{
+  "name": "dorisproject",
+  "version": "1.0.0",
+  "description": "Een reservingssysteem voor me moeder ",
+  "main": "gruntfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HypeHenry/DorisReserveringSysteem.git"
+  },
+  "keywords": [
+    "symfony3",
+    "boostrap4"
+  ],
+  "author": "henry barima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HypeHenry/DorisReserveringSysteem/issues"
+  },
+  "homepage": "https://github.com/HypeHenry/DorisReserveringSysteem#readme"
+}

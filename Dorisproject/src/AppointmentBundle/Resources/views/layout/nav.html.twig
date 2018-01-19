@@ -1,0 +1,55 @@
+{% block nav %}
+    <nav class="navbar navbar-expand-md navbar-light" id="navtext" style="background-color: #381027;">
+        <a class="navbar-brand" href="#">
+            <img src="{{ asset('bundles/appointment/img/white.svg') }}" width="60" height="60" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse navbar-collapse" data-target="#collapse navbar-collapse" aria-controls="collapse navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path('appointment_default_index') }}">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{{ path('appointment_default_hairstyles') }}" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hairstyles</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a class="dropdown-item" href="{{ path('appointment_default_portfolio') }}">Portfolio</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('appointment_default_hairproducts') }}">Hairproducts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('appointment_default_contact') }}">Contact</a>
+                </li>
+                <li class="nav-item">
+                    {% if  app.user  %}
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ app.user }}
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ path('fos_user_change_password') }}">change password</a>
+                            <a class="dropdown-item" href="{{ path('fos_user_security_logout') }}">logout</a>
+                        </div>
+                    </div>
+                </li>
+                {#{% else %}#}
+                {#{% if  app.user.username  %}#}
+                {#<li>#}
+                {#<a class="nav-link" href="#">{{ app.user.username }}</a>#}
+                {#</li>#}
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('fos_user_security_login') }}">Login</a>
+                    </li>
+                {% endif %}
+
+            </ul>
+        </div>
+    </nav>
+{% endblock %}
