@@ -37,6 +37,20 @@ class Appointment
 
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="Customerid", type="integer")
+     */
+    private $customerid;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppointmentBundle\Entity\Customer")
+     * @ORM\JoinColumn(name="Customerid", referencedColumnName="id")
+     */
+    private $customer;
+
+
+    /**
      * Get id
      *
      * @return int
@@ -93,5 +107,57 @@ class Appointment
     {
         return $this->appointment;
     }
-}
 
+    /**
+     * Set customerid
+     *
+     * @param integer $customerid
+     *
+     * @return Appointment
+     */
+    public function setCustomerid($customerid)
+    {
+        $this->customerid = $customerid;
+
+        return $this;
+    }
+
+    /**
+     * Get customerid
+     *
+     * @return integer
+     */
+    public function getCustomerid()
+    {
+        return $this->customerid;
+    }
+
+    /**
+     * Set customer
+     *
+     * @param \AppointmentBundle\Entity\Customer $customer
+     *
+     * @return Appointment
+     */
+    public function setCustomer(\AppointmentBundle\Entity\Customer $customer = null)
+    {
+        $this->customer = $customer;
+
+        return $this;
+    }
+
+    /**
+     * Get customer
+     *
+     * @return \AppointmentBundle\Entity\Customer
+     */
+    public function getCustomer()
+    {
+        return $this->customer;
+    }
+
+    public function __toString(){
+
+        return $this->getCustomer();
+    }
+}

@@ -3,12 +3,13 @@
 {% block body %}
     <h1>Appointments list</h1>
 
-    <table class="table">
-        <thead class="thead-inverse">
+    <table>
+        <thead>
             <tr>
                 <th>Id</th>
                 <th>Hairdescription</th>
                 <th>Appointment</th>
+                <th>Customer</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -18,6 +19,7 @@
                 <td><a href="{{ path('appointment_show', { 'id': appointment.id }) }}">{{ appointment.id }}</a></td>
                 <td>{{ appointment.hairDescription }}</td>
                 <td>{% if appointment.appointment %}{{ appointment.appointment|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ appointment.customer }}</td>
                 <td>
                     <ul>
                         <li>

@@ -124,5 +124,9 @@ class Customer
     {
         return $this->phonenumber;
     }
-}
 
+    public function __toString()
+    {
+        return $this->getName();
+    }
+}

@@ -17,6 +17,10 @@
                 <th>Appointment</th>
                 <td>{% if appointment.appointment %}{{ appointment.appointment|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
+            <tr>
+                <th>Customer</th>
+                <td>{{ appointment.customer }}</td>
+            </tr>
         </tbody>
     </table>
 

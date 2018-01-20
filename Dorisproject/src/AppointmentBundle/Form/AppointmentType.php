@@ -13,7 +13,10 @@ class AppointmentType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('hairDescription')->add('appointment');
+        $builder->add('hairDescription')
+            ->add('appointment')
+//            ->add('customerid')
+            ->add('customer');
     }/**
      * {@inheritdoc}
      */

@@ -26,7 +26,7 @@ class CustomerController extends Controller
 
         $customers = $em->getRepository('AppointmentBundle:Customer')->findAll();
 
-        return $this->render('@Appointment/customer/index.html.twig', array(
+        return $this->render('@Appointment/customer/index.html.twig/', array(
             'customers' => $customers,
         ));
     }
@@ -67,7 +67,7 @@ class CustomerController extends Controller
     {
         $deleteForm = $this->createDeleteForm($customer);
 
-        return $this->render('@Appointment/customer/show.html.twig', array(
+        return $this->render('customer/show.html.twig', array(
             'customer' => $customer,
             'delete_form' => $deleteForm->createView(),
         ));
