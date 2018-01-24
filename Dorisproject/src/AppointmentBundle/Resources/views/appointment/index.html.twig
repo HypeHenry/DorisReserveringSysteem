@@ -3,10 +3,10 @@
 {% block body %}
     <h1>Appointments list</h1>
 
-    <table>
+    <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+                {#<th>Id</th>#}
                 <th>Hairdescription</th>
                 <th>Appointment</th>
                 <th>Customer</th>
@@ -16,9 +16,9 @@
         <tbody>
         {% for appointment in appointments %}
             <tr>
-                <td><a href="{{ path('appointment_show', { 'id': appointment.id }) }}">{{ appointment.id }}</a></td>
+                {#<td><a href="{{ path('appointment_show', { 'id': appointment.id }) }}">{{ appointment.id }}</a></td>#}
                 <td>{{ appointment.hairDescription }}</td>
-                <td>{% if appointment.appointment %}{{ appointment.appointment|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if appointment.appointment %}{{ appointment.appointment|date(' l d F Y H:i:s') }}{% endif %}</td>
                 <td>{{ appointment.customer }}</td>
                 <td>
                     <ul>
